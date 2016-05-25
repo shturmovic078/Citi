@@ -54,8 +54,14 @@ puts loc1
 $b.window.resize_to(loc1, loc2)
 i+=1
 sleep 2
+if loc1 =320
+puts "x is 320"
+ else
+  puts "x is not"
+end
 
-$b.screenshot.save i.to_s<<"_"<<loc1<<"x"<<loc2<<".png"
+$b.screenshot.save "320/"<<i.to_s<<"_"<<loc1<<"x"<<loc2<<".png"
+
 
 
 sleep 2
