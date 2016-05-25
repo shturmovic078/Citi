@@ -60,9 +60,6 @@ $b.screenshot.save "320/#"<i.to_s<<".png"
 
 sleep 2
 
-
-
-
 end
 
 end
