@@ -14,11 +14,10 @@ def setupBrowserStack
 include Selenium
 
 caps = WebDriver::Remote::Capabilities.new
-caps['browser'] = 'Firefox'
-caps['browser_version'] = '45.0'
-caps['os'] = 'Windows'
-caps['os_version'] = '7'
-caps['resolution'] = '1024x768'
+caps[:os] = "Windows"
+caps[:name] = "Watir WebDriver"
+caps[:browser] = "firefox"
+caps[:browser_version] = "44"
 caps["browserstack.debug"] = "true"
 
 $b= Watir::Browser.new(:remote,
@@ -47,18 +46,24 @@ csv.each do |row|
 sleep 4
 loc1= "#{row['sizeA']}"
 loc2= "#{row['sizeB']}"
+loc3= "#{row['device']}"
 
 sleep 5
 puts loc1
 
 $b.window.resize_to(loc1, loc2)
 i+=1
-sleep 7
-#$b.screenshot.save i.to_s<<"_"<<loc1<<"x"<<loc2<<".png"
-$b.screenshot.save "320/#"<i.to_s<<".png"
+sleep 2
+
+$b.screenshot.save i.to_s<<"_"<<loc1<<"x"<<loc2<<".png"
+
 
 sleep 2
 
+
+
+
+end
 
 end
 
