@@ -34,7 +34,7 @@ end
 puts setupBrowserStack
 
 i=0;
-csv_text = File.read('citi.csv',encoding: "iso-8859-1:UTF-8")
+csv_text = File.read('citi2.csv',encoding: "iso-8859-1:UTF-8")
 csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|  
 sleep 4
