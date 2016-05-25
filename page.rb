@@ -54,13 +54,11 @@ puts loc1
 $b.window.resize_to(loc1, loc2)
 i+=1
 sleep 7
-if loc1 == 320
 #$b.screenshot.save i.to_s<<"_"<<loc1<<"x"<<loc2<<".png"
 $b.screenshot.save "320/#"<i.to_s<<".png"
 
 sleep 2
 
-end
 
 end
 
